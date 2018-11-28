@@ -1,3 +1,5 @@
+@import '_variables';
+
 @font-face {
     font-family: 'GTWalsheimProRegular';
     src: url('./gt-walsheim-regular.ttf') format("truetype");
@@ -30,7 +32,7 @@ body {
             flex-direction: column;
 
             font-family: "GTWalsheimProRegular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
-            color: #dfac6e;
+            color: $defaultFg;
 
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#003648+0,003648+55,00526d+100 */
             background: #003648; /* Old browsers */
@@ -64,7 +66,7 @@ body {
 }
 
 a {
-    color: #dfac6e;
+    color: $defaultFg;
 }
 
 

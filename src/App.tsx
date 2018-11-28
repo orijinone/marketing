@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { resolve, history } from './router'
 
 import MainPage from './pages/MainPage'
+import assets from './assets'
 
 import "./App.scss"
 
@@ -102,8 +103,7 @@ class App extends React.Component {
                     <meta property='og:title' content='OrijinOne' />
                     <meta property='og:description' content='Authentication Solution for Your Most Valuable Possessions' />
                     <meta property='og:url' content='http://www.orijin.one' />
-                    <meta property='og:image' content='http://www.orijin.one/static/media/logo.c2259be8.png' />
-
+                    <meta property='og:image' content={ assets.logo }/>
 
                     {/*
                       manifest.json provides metadata used when your web app is added to the
