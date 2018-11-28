@@ -36,7 +36,7 @@ body {
 
         .orijin {
             display: flex;
-            height: 100vh;
+            height: 70%;
             width: 100%;
             align-items: center;
         }
@@ -44,15 +44,12 @@ body {
         .footer {
             text-align: center;
             margin: 1em 0;
-
-            @media (max-width: 400px) {
-                margin-bottom: 100px;
-            }
         }
 
         // Mobile
         @media (max-width: 400px) {
             font-size: 0.7em;
+            height: calc(100vh - 200px);
         }
     }
 }
