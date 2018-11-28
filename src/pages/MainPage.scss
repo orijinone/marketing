@@ -1,0 +1,30 @@
+.main {
+
+    .logo {
+        text-align: center;
+        background-image: url('../images/logo.png');
+
+        min-height: 200px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+    }
+
+    .separator {
+        margin: 2em auto;
+        margin-bottom: 0;
+        border-bottom: 1px dashed #dfac6e61;
+        width: 25%;
+    }
+
+    .tag {
+        margin-top: 2em;
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    .tag2 {
+        margin-top: 1em;
+    }
+}

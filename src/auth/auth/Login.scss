@@ -1,0 +1,63 @@
+html body {
+  .login-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .login-btn {
+    font-size: 1.1em;
+    width: 70%;
+    max-width: 500px;
+    min-width: 360px;
+
+    @media( min-width: 768px) {
+      font-size: 2em;
+    }
+    font-weight: 600;
+
+    height: initial !important;
+    line-height: initial !important;
+
+    color: #fff;
+    position: relative;
+    padding: 1.4em;
+    padding-left: 3.8em;
+    border-radius: 2em !important;
+    text-transform: none !important;
+    text-align: left;
+
+    &:not(:last-child) {
+      margin-bottom: 0.6em;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 1.14em;
+      left: 1.5em;
+      width: 1.6em;
+      height: 1.7em;
+      background-repeat: no-repeat;
+      background-size: 1.6em;
+    }
+  }
+
+  .facebook-btn {
+    background: #fff !important;
+    color: #3b579d !important;
+
+    &:after {
+      background-image: url('/assets/images/facebook-white.svg')
+    }
+  }
+
+  .google-btn {
+    background: none !important;
+    background-color: #db3236 !important;
+
+    &:after {
+      background-image: url('/assets/images/google-white.svg')
+    }
+  }
+}
