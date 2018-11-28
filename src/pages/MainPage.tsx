@@ -22,7 +22,7 @@ class MainPage extends React.Component {
                                 Authentication Solution for Your Most Valuable Possessions
                             </Col>
                             <Col xs={{ size: 12 }} className='tag tag2'>
-                                Ownership Tracking to Enable the Most Trusted Transactions
+                                Ownership Tracking to Enable Secure and Trusted Transactions
                             </Col>
                         </Row>
                     </Col>
