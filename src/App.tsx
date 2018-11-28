@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { resolve, history } from './router'
 
-import MainPage from './pages/MainPage'
+import LandingPage from './pages/LandingPage'
 import assets from './assets'
 
 import "./App.scss"
@@ -89,7 +89,7 @@ class App extends React.Component {
     ];
 
     commonRoutes = [
-        { path: '/', action: () => <MainPage /> },
+        { path: '/', action: () => <LandingPage /> },
     ];
 
     render() {

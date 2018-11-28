@@ -2,13 +2,13 @@ import * as React from 'react'
 
 import { Row, Col } from 'reactstrap'
 
-import './MainPage.scss'
+import './LandingPage.scss'
 
-class MainPage extends React.Component {
+class LandingPage extends React.Component {
 
     render() {
         return (
-            <div className='main' >
+            <div className='landing-page' >
                 <Row>
                     <Col xs={{ size: 4, offset: 4 }} className='logo' />
                 </Row>
@@ -32,4 +32,4 @@ class MainPage extends React.Component {
     }
 }
 
-export default MainPage
+export default LandingPage
