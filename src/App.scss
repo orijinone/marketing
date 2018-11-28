@@ -22,34 +22,37 @@ body {
         display: flex;
         width: 100%;
         height: 100vh;
-    }
 
-    & #app {
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-
-        font-family: "GTWalsheimProRegular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
-        background: #003648;
-        color: #dfac6e;
-
-        .orijin {
-            display: flex;
-            height: 70%;
-            width: 100%;
-            align-items: center;
-        }
-
-        .footer {
-            text-align: center;
-            margin: 1em 0;
-        }
-
-        // Mobile
         @media (max-width: 400px) {
-            font-size: 0.7em;
             height: calc(100vh - 200px);
+        }
+
+        & #app {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+
+            font-family: "GTWalsheimProRegular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+            background: #003648;
+            color: #dfac6e;
+
+            .orijin {
+                display: flex;
+                height: 70%;
+                width: 100%;
+                align-items: center;
+            }
+
+            .footer {
+                text-align: center;
+                margin: 1em 0;
+            }
+
+            // Mobile
+            @media (max-width: 400px) {
+                font-size: 0.7em;
+            }
         }
     }
 }
