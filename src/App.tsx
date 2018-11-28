@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as History from 'history'
+import { Grid, createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import { Helmet } from 'react-helmet'
 
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -9,22 +10,31 @@ import LandingPage from './pages/LandingPage'
 import assets from './assets'
 
 import "./App.scss"
+import Footer from './Footer'
 
 
-class Footer extends React.Component {
-    render() {
-        return (
-            <div className='footer'>
-                m@orijin.one
-            </div>
-        )
-    }
-}
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#003648',
+            contrastText: '#dfac6e',
+        },
+        secondary: {
+            main: '#ffffff',
+            contrastText: '#000000',
+        },
+        error: {
+            main: '#ef5350',
+            contrastText: '#000000',
+        }
+    },
+});
 
 
 interface AppState {
     component?: React.Component
 }
+
 
 
 class App extends React.Component {
@@ -94,7 +104,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div id='app'>
+            <MuiThemeProvider theme={theme}>
                 <Helmet>
                     <title>OrijinOne</title>
 
@@ -113,12 +123,12 @@ class App extends React.Component {
                     <link rel="shortcut icon" href="http://www.orijin.one/favicon.ico" />
                 </Helmet>
 
-                <div className='orijin'>
+                <Grid className='orijin'>
                     <CssBaseline />
                     { this.state.component }
-                </div>
+                </Grid>
                 <Footer />
-            </div>
+            </MuiThemeProvider>
         )
     }
 }
