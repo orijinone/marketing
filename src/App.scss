@@ -13,7 +13,6 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
 
     &.fixed-nav {
     }
@@ -44,8 +43,13 @@ body {
         .footer {
             text-align: center;
             margin: 1em 0;
+
+            @media (max-width: 400px) {
+                margin-bottom: 100px;
+            }
         }
 
+        // Mobile
         @media (max-width: 400px) {
             font-size: 0.7em;
         }
