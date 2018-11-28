@@ -14,8 +14,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    &.fixed-nav {
-    }
+    // No scrolling or dragging
+    position: fixed;
+    overflow: hidden;
 
     & #root {
         display: flex;
