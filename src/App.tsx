@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as History from 'history'
+import { Helmet } from 'react-helmet'
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { resolve, history } from './router'
@@ -93,6 +94,25 @@ class App extends React.Component {
     render() {
         return (
             <div id='app'>
+                <Helmet>
+                    <title>OrijinOne</title>
+
+                    {/*  Facebook OG */}
+                    <meta property='og:site_name' content='Orijin.one' />
+                    <meta property='og:title' content='OrijinOne' />
+                    <meta property='og:description' content='Authentication Solution for Your Most Valuable Possessions' />
+                    <meta property='og:url' content='http://www.orijin.one' />
+                    <meta property='og:image' content='http://www.orijin.one/static/media/logo.c2259be8.png' />
+
+
+                    {/*
+                      manifest.json provides metadata used when your web app is added to the
+                      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+                     */}
+                    <link rel="manifest" href="http://%www.orijin.one%/manifest.json" />
+                    <link rel="shortcut icon" href="http://www.orijin.one/favicon.ico" />
+                </Helmet>
+
                 <div className='orijin'>
                     <CssBaseline />
                     { this.state.component }
