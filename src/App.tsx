@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as History from 'history'
-import { Grid, createMuiTheme, MuiThemeProvider } from '@material-ui/core'
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import { Helmet } from 'react-helmet'
 
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -11,6 +11,7 @@ import assets from './assets'
 
 import "./App.scss"
 import Footer from './Footer'
+import { Row } from './ui/RowCol'
 
 
 const theme = createMuiTheme({
@@ -123,10 +124,10 @@ class App extends React.Component {
                     <link rel="shortcut icon" href="http://www.orijin.one/favicon.ico" />
                 </Helmet>
 
-                <Grid className='orijin'>
+                <Row dir='vertical' vAlign='center' className='orijin'>
                     <CssBaseline />
                     { this.state.component }
-                </Grid>
+                </Row>
                 <Footer />
             </MuiThemeProvider>
         )

@@ -40,10 +40,8 @@ body {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003648', endColorstr='#00526d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
         .orijin {
-            display: flex;
             height: 100%;
             width: 100%;
-            align-items: center;
 
             @media (max-width: 400px) {
                 height: 75%;
