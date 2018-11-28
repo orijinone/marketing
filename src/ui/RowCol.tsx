@@ -42,7 +42,7 @@ function convert(prop: 'align' | 'justify', a: HorzAlignment | VertAlignment): G
 }
 
 export function Row(props: RowProps) {
-    const { children, dir, vAlign, hAlign, spacing, ...other } = props
+    const { children, dir, vAlign, hAlign, spacing, xs, ...other } = props
     const direction = dir ? dir : 'horizontal'
     let justify
     let align
@@ -59,11 +59,12 @@ export function Row(props: RowProps) {
     }
 
     return (
-        <MGrid container
+        <MGrid container item={!!xs}
               direction={ convertDir(direction) }
               alignItems={align ? convert('align', align) as GridItemsAlignment : 'center'}
               justify={justify ? convert('justify', justify) as GridJustification : 'center'}
               spacing={spacing ? spacing : 0}
+              xs={xs}
               {...other} >
             { children }
         </MGrid>

@@ -13,7 +13,7 @@ class LandingPage extends React.Component {
                 <Row>
                     <Col xs={4} className='separator'/>
                 </Row>
-                <Row item xs={10}>
+                <Row xs={10}>
                     <Col xs={12} className='tag'>
                         Authentication Solution for Your Most Valuable Possessions
                     </Col>
