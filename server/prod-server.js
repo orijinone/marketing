@@ -3,7 +3,7 @@ const path = require('path');
 var forceSsl = require('force-ssl-heroku');
 
 const app = express();
-app.use(forceSsl);
+// app.use(forceSsl);
 
 const buildPath = path.join(__dirname, '../build')
 
