@@ -18,10 +18,10 @@ class LandingPage extends React.Component {
                 </Row>
                 <Row>
                     <Col xs={{size: 10, offset: 1}} className='tag'>
-                        Authentication Solution for Your Most Valuable Possessions
+                        Ownership Authentication Solution for High Valued Assets
                     </Col>
                     <Col xs={{size: 10, offset: 1}} className='tag tag2'>
-                        Ownership Tracking to Enable Secure and Trusted Transactions
+                        The Standard for Trusted Transactions Beyond the First Point of Sale
                     </Col>
                 </Row>
                 <ImageTextTile title='Cool' image={ assets.people } style={{ backgroundColor: '#fff' }}>
