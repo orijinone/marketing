@@ -1,14 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import App from './App'
+import Router from './Router'
 import registerServiceWorker from './registerServiceWorker'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
 
-
 ReactDOM.render(
-    <App/>,
+    <Router/>,
     document.getElementById('root')
 );
 

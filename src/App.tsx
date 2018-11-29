@@ -1,111 +1,18 @@
 import * as React from 'react'
-import * as History from 'history'
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import { Helmet } from 'react-helmet'
+import FlexView from 'react-flexview'
 
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { resolve, history } from './router'
-
-import LandingPage from './pages/LandingPage'
 import assets from './assets'
 
 import "./App.scss"
 import Footer from './Footer'
-import { Row } from './ui/RowCol'
-
-
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: '#003648',
-            contrastText: '#dfac6e',
-        },
-        secondary: {
-            main: '#ffffff',
-            contrastText: '#000000',
-        },
-        error: {
-            main: '#ef5350',
-            contrastText: '#000000',
-        }
-    },
-});
-
-
-interface AppState {
-    component?: React.Component
-}
-
 
 
 class App extends React.Component {
 
-    state   : AppState
-    account : Account
-
-    constructor(props: any, context: any) {
-        super(props, context)
-
-        this.accountChanged = this.accountChanged.bind(this)
-        this.renderLocation = this.renderLocation.bind(this)
-
-        this.state = {
-        }
-    }
-
-    async accountChanged() {
-        // Setup account state object w/ particular callbacks
-
-        this.setState({ account: { model: Object.assign({}, this.account), svc: this.account } })
-    }
-
-    componentDidMount() {
-        history.listen(this.renderLocation)   // render subsequent URLs
-        this.renderLocation(history.location, 'REPLACE')
-    }
-
-    renderComponent(component : any) {
-        if (!component) {
-            console.log("Error trying to set to null component")
-            return
-        }
-
-        console.log(`Setting component to ${component.type.name}`)
-        this.setState({ component })
-    }
-
-    async renderLocation(location : History.Location, action: History.Action) {
-        const routes : object[] = this.commonRoutes
-
-        if (false) {
-            routes.concat( this.loggedInRoutes )
-        } else {
-            routes.concat( this.loggedOutRoutes )
-        }
-
-        try {
-            const component = await resolve( routes, location)
-            this.renderComponent(component)
-        } catch (error) {
-            const component = await resolve( routes, { ...location, error })
-            this.renderComponent(component)
-        }
-    }
-
-
-    loggedOutRoutes = [
-    ];
-
-    loggedInRoutes = [
-    ];
-
-    commonRoutes = [
-        { path: '/', action: () => <LandingPage /> },
-    ];
-
     render() {
         return (
-            <MuiThemeProvider theme={theme}>
+            <React.Fragment>
                 <Helmet>
                     <title>OrijinOne</title>
 
@@ -124,12 +31,13 @@ class App extends React.Component {
                     <link rel="shortcut icon" href="http://www.orijin.one/favicon.ico" />
                 </Helmet>
 
-                <Row dir='vertical' vAlign='center' className='orijin'>
-                    <CssBaseline />
-                    { this.state.component }
-                </Row>
-                <Footer />
-            </MuiThemeProvider>
+                <FlexView column style={{ justifyContent: 'space-between'}} className='wrapper'>
+                    <FlexView column vAlignContent='center' className='main-content'>
+                        {this.props.children}
+                    </FlexView>
+                    <Footer />
+                </FlexView>
+            </React.Fragment>
         )
     }
 }

@@ -8,54 +8,61 @@
 html {
     position: relative;
     min-height: 100%;
-}
 
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    // No scrolling or dragging
-    position: fixed;
-    overflow: hidden;
-
-    & #root {
-        display: flex;
+    body {
+        margin: 0;
+        padding: 0;
         width: 100%;
-        height: 100%;
-        flex-direction: column;
+        min-height: 100vh;
 
-        font-family: "GTWalsheimProRegular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
-        color: $defaultFg;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#003648+0,003648+55,00526d+100 */
-        background: #003648; /* Old browsers */
-        background: -moz-linear-gradient(-45deg, #003648 0%, #003648 55%, #00526d 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg, #003648 0%,#003648 55%,#00526d 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, #003648 0%,#003648 55%,#00526d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003648', endColorstr='#00526d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-        .orijin {
-            height: 100%;
+        & #root {
+            display: flex;
             width: 100%;
+            min-height: 100vh;
+            flex-direction: column;
 
+            font-family: "GTWalsheimProRegular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+            color: $defaultFg;
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#003648+0,003648+55,00526d+100 */
+            background: #003648; /* Old browsers */
+            background: -moz-linear-gradient(-45deg, #003648 0%, #003648 55%, #00526d 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, #003648 0%, #003648 55%, #00526d 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, #003648 0%, #003648 55%, #00526d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003648', endColorstr='#00526d', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+            .wrapper {
+                min-height: 100vh;
+
+                .header {
+
+                }
+
+                .main-content {
+                    width: 100%;
+
+                    @media (max-width: 400px) {
+                        height: 75%;
+                    }
+                }
+
+                .footer {
+                    text-align: center;
+                    margin: 2em 0;
+                }
+            }
+
+            // Mobile
             @media (max-width: 400px) {
-                height: 75%;
+                font-size: 0.7em;
             }
         }
 
-        .footer {
-            text-align: center;
-            margin: 2em 0;
-        }
-
-        // Mobile
-        @media (max-width: 400px) {
-            font-size: 0.7em;
+        .row {
+            width: calc(100% + 30px);
         }
     }
 }
