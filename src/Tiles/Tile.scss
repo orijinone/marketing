@@ -48,6 +48,12 @@
         .vertical-timeline-element-icon {
             background-color: #2196f3;
             color: #fff;
+            display: flex;
+            flex: 1;
+
+            .tile-image {
+                align-self: center;
+            }
         }
 
         @media only screen and (min-width: 1170px) {

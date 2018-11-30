@@ -3,7 +3,6 @@ import './LandingPage.scss'
 import { Row, Col } from 'reactstrap'
 import assets from '../assets'
 import FlexView from 'react-flexview'
-import { TiGift } from 'react-icons/ti';
 import { FiTag } from 'react-icons/fi';
 
 import Tile from '../Tiles/Tile'
@@ -70,7 +69,7 @@ class LandingPage extends React.Component {
                                               <h4>Title</h4>
                                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies leo vitae sodales luctus. Nullam condimentum, nisl non imperdiet lacinia, ipsum augue dapibus lorem, nec dictum lectus nisl id magna. Aliquam at dapibus velit. Nullam porta ultricies turpis, vel euismod diam elementum sit amet. Praesent non semper urna, a facilisis turpis. Aenean urna nulla, tincidunt ut eros sed, rhoncus feugiat mauris. Vestibulum ultricies leo ut congue fermentum. Vestibulum vitae aliquam quam.</p>
                                           </React.Fragment>),
-                                      icon: <TiGift />
+                                      image: assets.onsale
                                   }
                               ]}/>
 
