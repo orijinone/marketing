@@ -1,31 +1,44 @@
 .landing-page {
 
-    .logo {
-        margin-top: 10em;
+    .tile-hero {
+        padding-bottom: 3em;
+        height: 100vh;
 
-        text-align: center;
-        background-image: url('../images/logo.png');
+        background: #003648;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#003648+0,003648+53,00526d+100 */
+        background: -moz-linear-gradient(top, #003648 0%, #003648 53%, #00526d 100%);
+        background: -webkit-linear-gradient(top, #003648 0%,#003648 53%,#00526d 100%);
+        background: linear-gradient(to bottom, #003648 0%,#003648 53%,#00526d 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003648', endColorstr='#00526d',GradientType=0 );
 
-        min-height: 200px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: bottom;
+        .logo {
+            margin-top: 3em;
+
+            text-align: center;
+            background-image: url('../images/logo.png');
+
+            min-height: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: bottom;
+        }
+
+        .separator {
+            margin: 2em auto;
+            margin-bottom: 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .tag {
+            margin-top: 2em;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .tag2 {
+            margin-top: 1em;
+        }
     }
 
-    .separator {
-        margin: 2em auto;
-        margin-bottom: 0;
-        border-bottom: 1px dashed #dfac6e61;
-    }
-
-    .tag {
-        margin-top: 2em;
-        font-size: 1.8em;
-        text-align: center;
-    }
-
-    .tag2 {
-        margin-top: 1em;
-    }
 }

@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'GTWalsheimProRegular';
-    src: url('./gt-walsheim-regular.ttf') format("truetype");
+    src: url('fonts/gt-walsheim-regular.ttf') format("truetype");
 }
 
 html {
@@ -18,6 +18,19 @@ html {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
+        // Fix reactstrap??
+        .row {
+            display: flex;
+            width: calc(100% + 30px);
+        }
+
+        .col,
+        [class*="col-"] {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         & #root {
             display: flex;
             width: 100%;
@@ -26,16 +39,11 @@ html {
 
             font-family: "GTWalsheimProRegular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
             color: $defaultFg;
-
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#003648+0,003648+55,00526d+100 */
-            background: #003648; /* Old browsers */
-            background: -moz-linear-gradient(-45deg, #003648 0%, #003648 55%, #00526d 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(-45deg, #003648 0%, #003648 55%, #00526d 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(135deg, #003648 0%, #003648 55%, #00526d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003648', endColorstr='#00526d', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+            background: $defaultBg;
 
             .wrapper {
                 min-height: 100vh;
+                overflow-x: hidden;
 
                 .header {
 
@@ -59,10 +67,6 @@ html {
             @media (max-width: 400px) {
                 font-size: 0.7em;
             }
-        }
-
-        .row {
-            width: calc(100% + 30px);
         }
     }
 }
