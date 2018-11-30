@@ -1,3 +1,5 @@
+@import '../_variables.scss';
+
 .tile {
     width: 100%;
 
@@ -38,14 +40,21 @@
     }
 
     &.tile-timeline {
-        .tile-title {
-            margin-bottom: 5rem;
+        .vertical-timeline-element-content {
+            border-top: 0.5em solid #2196f3;
+            padding-top: 1em;
+            top: -0.5em;
         }
-        .tile-image {
-
+        .vertical-timeline-element-icon {
+            background-color: #2196f3;
+            color: #fff;
         }
-        .tile-description {
 
+        @media only screen and (min-width: 1170px) {
+            .vertical-timeline--two-columns .vertical-timeline-element-content {
+                width: 44%;
+                top: -0.5em;
+            }
         }
     }
 

@@ -3,6 +3,8 @@ import './LandingPage.scss'
 import { Row, Col } from 'reactstrap'
 import assets from '../assets'
 import FlexView from 'react-flexview'
+import { TiGift } from 'react-icons/ti';
+import { FiTag } from 'react-icons/fi';
 
 import Tile from '../Tiles/Tile'
 import TextImageTile from '../Tiles/TextImageTile'
@@ -50,17 +52,25 @@ class LandingPage extends React.Component {
 
                 <TimelineTile id='timeline'
                               title='Timeline'
-                              style={{ color: '#47525d', background: '#fff' }}
+                              style={{ color: '#47525d', background: '#ccc' }}
                               steps={[
                                   {
-                                      title: 'Start',
-                                      description: 'We begin',
-                                      image: assets.stamp
+                                      date: 'Nov 2018',
+                                      description: (
+                                          <React.Fragment>
+                                              <h4>Title</h4>
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies leo vitae sodales luctus. Nullam condimentum, nisl non imperdiet lacinia, ipsum augue dapibus lorem, nec dictum lectus nisl id magna. Aliquam at dapibus velit. Nullam porta ultricies turpis, vel euismod diam elementum sit amet. Praesent non semper urna, a facilisis turpis. Aenean urna nulla, tincidunt ut eros sed, rhoncus feugiat mauris. Vestibulum ultricies leo ut congue fermentum. Vestibulum vitae aliquam quam.</p>
+                                          </React.Fragment>),
+                                      icon: <FiTag />
                                   },
                                   {
-                                      title: 'End',
-                                      description: 'We end',
-                                      image: assets.stamp
+                                      date: 'Jan 2019',
+                                      description: (
+                                          <React.Fragment>
+                                              <h4>Title</h4>
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies leo vitae sodales luctus. Nullam condimentum, nisl non imperdiet lacinia, ipsum augue dapibus lorem, nec dictum lectus nisl id magna. Aliquam at dapibus velit. Nullam porta ultricies turpis, vel euismod diam elementum sit amet. Praesent non semper urna, a facilisis turpis. Aenean urna nulla, tincidunt ut eros sed, rhoncus feugiat mauris. Vestibulum ultricies leo ut congue fermentum. Vestibulum vitae aliquam quam.</p>
+                                          </React.Fragment>),
+                                      icon: <TiGift />
                                   }
                               ]}/>
 

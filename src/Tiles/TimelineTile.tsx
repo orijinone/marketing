@@ -1,15 +1,18 @@
 import * as React from 'react'
 import FlexView from 'react-flexview'
-import { Col, Row } from 'reactstrap'
+
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 import Tile, { TileProps } from './Tile'
-
 import './Tile.scss'
 
 export interface TimelineStep {
-    title: string
-    image: string
-    description: string
+    date: string
+    image?: string
+    icon?: React.ReactNode
+    iconStyle?: React.CSSProperties
+    description: React.ReactNode
 }
 
 export interface TimelineTileProps extends TileProps {
@@ -25,20 +28,20 @@ export default class TimelineTile extends React.Component<TimelineTileProps> {
 
         return (
             <Tile className='tile-timeline' {...tileProps}>
-                <FlexView column hAlignContent='center'>
+                <FlexView column hAlignContent='center' style={{ width: '100%' }}>
                     <h1 className='tile-title'>{title}</h1>
-                    { steps.map((step, i) => (
-                        <Row style={{ flexDirection: i % 2 === 0 ? 'row' : 'row-reverse' }}>
-                            <Col xs={5}>
-                                <span className='tile-description'>{ step.description }</span>
-                                <img className='tile-image' src={ step.image }/>
-                            </Col>
-                            <Col xs={2} style={{ alignItems: 'center' }}>
-                                <div className='tile-vline' />
-                            </Col>
-                            <Col xs={5}>&nbsp;</Col>
-                        </Row>
-                    ))}
+                    <VerticalTimeline>
+                        { steps.map((step) => (
+                            <VerticalTimelineElement
+                                className="vertical-timeline-element--work"
+                                date={ step.date }
+                                icon={ step.image ? <img className='tile-image' src={ step.image }/> : step.icon }
+                                iconStyle = { step.iconStyle }
+                            >
+                                { step.description }
+                            </VerticalTimelineElement>
+                        ))}
+                    </VerticalTimeline>
                 </FlexView>
             </Tile>
         )
