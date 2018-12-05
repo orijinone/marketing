@@ -1,6 +1,5 @@
 import * as React from 'react'
 import FlexView from 'react-flexview'
-import provideScrollPosition from 'react-provide-scroll-position';
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -8,10 +7,6 @@ import 'react-vertical-timeline-component/style.min.css';
 import Tile, { TileProps } from './Tile'
 import './Tile.scss'
 
-
-interface ProvideScrollProps {
-    scrollTop: number
-}
 
 export interface TimelineStep {
     date: string
@@ -21,7 +16,7 @@ export interface TimelineStep {
     description: React.ReactNode
 }
 
-export interface TimelineTileProps extends TileProps, ProvideScrollProps {
+export interface TimelineTileProps extends TileProps {
     title: string
     steps: TimelineStep[]
 }
@@ -92,4 +87,4 @@ class TimelineTile extends React.Component<TimelineTileProps> {
     }
 }
 
-export default provideScrollPosition(TimelineTile)
+export default TimelineTile
