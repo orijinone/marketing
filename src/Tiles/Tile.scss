@@ -40,6 +40,10 @@
     }
 
     &.tile-timeline {
+        .vertical-timeline {
+            overflow: hidden;
+        }
+
         .vertical-timeline-element-content {
             border-top: 0.5em solid #2196f3;
             padding-top: 1em;
@@ -53,6 +57,29 @@
 
             .tile-image {
                 align-self: center;
+            }
+        }
+        .tile-scrollingLine {
+            content: '';
+            will-change: transform;
+            position: absolute;
+            top: 0;
+            max-height: 10em;
+            transition: top 10ms;
+            left: 18px;
+            height: 100%;
+            width: 4px;
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f2f2+0,2196f3+24,2196f3+50,2196f3+75,e5e5e5+100 */
+            background: #f2f2f2; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2f2f2 0%, #2196f3 24%, #2196f3 50%, #2196f3 75%, #e5e5e5 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #f2f2f2 0%,#2196f3 24%,#2196f3 50%,#2196f3 75%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #f2f2f2 0%,#2196f3 24%,#2196f3 50%,#2196f3 75%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
+            @media only screen and (min-width: 1170px) {
+                left: 50%;
+                margin-left: -2px;
             }
         }
 
